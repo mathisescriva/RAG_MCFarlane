@@ -896,4 +896,3 @@ In summary, the vessel must ensure adequate metacentric height and heel angle to
 ---
 
 *Rapport généré automatiquement - Système RAG Maritime*
-
