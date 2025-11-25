@@ -1,0 +1,23 @@
+# RAG System for Maritime Regulatory Assistant
+# Python 3.10+
+
+# PDF Processing
+pdfplumber>=0.10.0
+
+# Vector Store
+faiss-cpu>=1.7.4
+numpy>=1.24.0
+
+# Embeddings (choose one or both)
+sentence-transformers>=2.2.0  # Local embeddings (recommended for POC)
+openai>=1.0.0  # OpenAI embeddings (requires API key)
+
+# Optional: For OpenAI GPT generation
+# openai>=1.0.0  # Already listed above
+
+# Utilities
+pathlib2>=2.3.7; python_version < '3.4'
+
+
+
+

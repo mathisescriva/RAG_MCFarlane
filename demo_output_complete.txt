@@ -1,0 +1,301 @@
+
+================================================================================
+  🚢 REG Yacht Code Part B - Extended RAG System Demo
+================================================================================
+
+Maritime Regulatory Assistant - Complete POC
+Demonstrating all 4 client requirements
+
+✓ Loading vector store from /Users/mathisescriva/CascadeProjects/RAG_MCFarlane/data/vectorstore...
+✓ Loaded 173 chunks
+✓ Flags available: REG, MALTA (REG: 162, MALTA: 11)
+✓ Using SentenceTransformer embeddings (local)...
+✓ Using OpenAI GPT for generation...
+
+--------------------------------------------------------------------------------
+  ✅ DEMO 1: Generating Compliance Checklists
+--------------------------------------------------------------------------------
+
+
+[1.1] REG Compliance Checklist for GE50:
+Yacht Specification: 50m yacht GE50 with 20 persons under Red Ensign Group
+
+REG Compliance Checklist:
+### Compliance Checklist for 50m Yacht GE50 with 20 Persons under Red Ensign Group
+
+1. **Intact Stability Criteria**
+   - **Ref:** 4.4
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** The master must be supplied with stability information necessary for maintaining stability under varying conditions, including curves or tables of minimum operational metacentric height (GM) and maximum permissible trim versus draught.
+
+2. **Stability in Damaged Condition**
+   - **Ref:** 4.30
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** The yacht must have sufficient intact stability to withstand flooding of any one main compartment within the floodable length, and calculations must consider the worst anticipated service condition.
+
+3. **Residual Righting Lever Curve**
+   - **Ref:** 4.30(7)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** The positive residual righting lever curve must have a minimum range of 15° beyond the angle of equilibrium, which may be reduced to 10° under certain conditions.
+
+4. **Area Under Righting Lever Curve**
+   - **Ref:** 4.30(8)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** The area under the righting lever curve must be at least 0.015 metre-radians, measured from the angle of equilibrium to the angle at which progressive flooding occurs or specified angles.
+
+5. **Heeling Moments Calculation**
+   - **Ref:** 4.30(9)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** The residual righting lever must be calculated considering heeling moments from passenger crowding, launching of survival craft, and wind pressure.
+
+6. **Draught Marks**
+   - **Ref:** 4.30(17)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** Datum draught marks must be provided at the bow and stern, port and starboard, to assess the condition and trim of the vessel.
+
+7. **Stability Information for the Master**
+   - **Ref:** 4.4(3)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** Stability information must include instructions for operating cross-flooding arrangements and all necessary data to maintain required stability.
+
+8. **Maximum Angle of Heel After Flooding**
+   - **Ref:** 4.30(14)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** In the case of symmetrical flooding, the positive residual metacentric height must be at least 50mm, and the angle of heel for one-compartment flooding must not exceed 7°.
+
+9. **Final Conditions After Damage**
+   - **Ref:** 4.30(14)(c)
+   - **Applies to <36 Persons:** Yes
+   - **Requirement:** The margin line must not be submerged in the final stage of flooding, and if it may become submerged during intermediate flooding, further investigations may be required.
+
+10. **Sailing Operations Manual**
+    - **Ref:** 4.30(2)
+    - **Applies to <36 Persons:** Yes
+    - **Requirement:** The sailing operations manual must include design parameters, sail combination schedules, and curves of maximum steady heel angle to prevent down flooding.
+
+This checklist ensures compliance with the relevant sections of the REG Yacht Code for a 50m yacht carrying 20 persons under the Red Ensign Group.
+
+📚 Sections covered: 4.30, 4.4
+
+[1.2] MALTA PYC Compliance Checklist for GE50:
+MALTA PYC Compliance Checklist:
+### Compliance Checklist for 50m Yacht GE50 with 20 Persons under Red Ensign Group
+
+1. **Compliance Criterion: Application of SOLAS 90 Subdivision and Stability Requirements**
+   - **Section Reference:** Ref: 5.2.2
+   - **Applies to <36 Persons:** Yes
+   - **Description:** If compliance with SOLAS Reg.II-1/6, Reg.II-1/7, and Reg.II-1/8 proves impracticable due to design and size, SOLAS 90 standards for Subdivision and Intact/Damage Stability may be applied.
+
+2. **Compliance Criterion: Safe Return to Port (SRtP) Requirements**
+   - **Section Reference:** Ref: 5.2.3
+   - **Applies to <36 Persons:** Yes
+   - **Description:** Passenger Yachts certified for Short International Voyages with a length of ≥ 120m or 3 or more main vertical zones may opt out of SRtP requirements due to the limited number of passengers and enhanced survivability.
+
+3. **Compliance Criterion: Enhanced Survivability Features**
+   - **Section Reference:** Ref: 5.2.3.1
+   - **Applies to <36 Persons:** Yes
+   - **Description:** The yacht must have enhanced survivability through additional requirements, including efficient passenger management and higher survival craft capacity.
+
+4. **Compliance Criterion: Double Bottom Requirement**
+   - **Section Reference:** Ref: 5.2.2.1
+   - **Applies to <36 Persons:** Not applicable (as it pertains to vessels of 61m and upwards)
+   - **Description:** Not applicable for a 50m yacht, as double bottom requirements apply to vessels ≥ 61m.
+
+5. **Compliance Criterion: Stability Booklet Note**
+   - **Section Reference:** Ref: 5.2.3
+   - **Applies to <36 Persons:** Yes
+   - **Description:** If SOLAS 90 Stability Requirements are applied, a note must be included in the approved Stability Booklet stating that “SOLAS 90 Stability Requirements have been applied.” 
+
+This checklist ensures that the 50m yacht GE50 with 20 persons complies with the relevant sections of the REG Yacht Code Part B.
+
+--------------------------------------------------------------------------------
+  🔍 DEMO 2: Comparing Requirements Across Flag States
+--------------------------------------------------------------------------------
+
+
+[2.1] Comparing Intact Stability Requirements:
+
+====================================================================================================
+Aspect                                   | REG                       | MALTA                     | Difference
+====================================================================================================
+Intact stability compliance              | Every ship shall comply   | References SOLAS II-1/6   | REG provides specific requirements; Malta referenc
+Stability information to be supplied t   | The master shall be sup   | References SOLAS for st   | REG specifies the content and approval process for
+Re-inclination after alterations         | Amended stability infor   | Not found in provided t   | REG has explicit requirements for re-inclination; 
+Periodic lightweight survey              | A lightweight survey sh   | Not found in provided t   | REG mandates periodic surveys; Malta does not ment
+Minimum GM requirement                   | Curves or tables of min   | References SOLAS for mi   | REG provides specific requirements; Malta referenc
+Stability in damaged condition           | Sufficient intact stabi   | References SOLAS II-1/8   | REG provides detailed requirements; Malta referenc
+Angle of heel after flooding             | The angle of heel shall   | Not found in provided t   | REG specifies maximum heel angle; Malta does not m
+Draught marks and indicating systems     | Datum draught marks sha   | Not found in provided t   | REG has explicit requirements for draught marks; M
+====================================================================================================
+
+
+[2.2] Comparing Damage Stability Requirements:
+
+====================================================================================================
+Aspect                                   | REG                       | MALTA                     | Difference
+====================================================================================================
+Stability in Damaged Condition           | Sufficient intact stabi   | References SOLAS II-1/6   | REG provides specific requirements for stability i
+Calculation of Stability                 | Calculations must consi   | References SOLAS for ca   | REG specifies detailed calculation requirements; M
+Residual Righting Lever                  | Positive residual right   | Not found in provided t   | REG specifies a minimum range for righting lever; 
+Heeling Moments Consideration            | Heeling moments due to    | Not found in provided t   | REG includes specific calculations for heeling mom
+Assumed Extent of Damage                 | Assumed longitudinal ex   | Not found in provided t   | REG provides specific criteria for assumed damage 
+Final Conditions After Damage            | Final conditions must e   | References SOLAS for fi   | REG specifies exact requirements for final conditi
+Master's Responsibilities                | Master must be supplied   | Not found in provided t   | REG outlines specific responsibilities for the mas
+Draught Marks Requirements               | Draught marks must be p   | Not found in provided t   | REG specifies requirements for draught marks; Malt
+Relaxation of Damage Stability Require   | Relaxations may be cons   | Not found in provided t   | REG provides conditions for relaxation of requirem
+====================================================================================================
+
+
+--------------------------------------------------------------------------------
+  📊 DEMO 3: Gap Analysis - Internal Procedures vs Regulations
+--------------------------------------------------------------------------------
+
+⚠️  Internal procedures not available (no INTERNAL chunks in vector store)
+   To enable gap analysis, add internal procedures PDF to vector store.
+
+--------------------------------------------------------------------------------
+  📝 DEMO 4: Structured Summaries of Complex Texts
+--------------------------------------------------------------------------------
+
+
+[4.1] Structured Summary of REG Section 4.30 (Stability in Damaged Condition):
+
+Section: 4.30 - Stability in Damaged Condition
+Flag: REG
+Chunks used: 20
+
+## Summary of REG Section 4.30: Stability in Damaged Condition
+
+### General Requirements
+- **Intact Stability**: Ships must maintain sufficient intact stability to withstand flooding of any one main compartment within the floodable length (Ref: 4.30(1)).
+- **Adjacent Compartment Flooding**: If two adjacent main compartments are separated by a stepped bulkhead, stability must be adequate to withstand flooding of both compartments (Ref: 4.30(2)).
+- **Subdivision Factors**:
+  - For a subdivision factor of **0.5 or less but more than 0.33**, stability must withstand flooding of any two adjacent compartments (Ref: 4.30(3)).
+  - For a subdivision factor of **0.33 or less**, stability must withstand flooding of any three adjacent compartments (Ref: 4.30(4)).
+
+### Technical Specifications
+- **Calculation Requirements**: Stability calculations must consider ship design characteristics and be based on the worst anticipated service condition (Ref: 4.30(5)).
+- **Water Flow Restrictions**: If decks or bulkheads restrict water flow, the Administration must ensure these restrictions are accounted for in stability calculations (Ref: 4.30(6)).
+- **Righting Lever Curve**: The positive residual righting lever curve must have a minimum range of **15°** beyond the angle of equilibrium, which can be reduced to **10°** under certain conditions (Ref: 4.30(7)).
+- **Area Under Righting Lever Curve**: Must be at least **0.015 metre-radians** from the angle of equilibrium to either the angle of progressive flooding or **22°** (one-compartment flooding) / **27°** (two or more compartments flooding) (Ref: 4.30(8)).
+- **Residual Righting Lever**: Must be obtained within the range of positive stability, considering heeling moments from passenger crowding, launching survival craft, and wind pressure (Ref: 4.30(9)).
+- **Heeling Moment Calculations**: Assumptions for heeling moments include:
+  - **Crowding**: Four persons per square meter, each weighing **75 kg** (Ref: 4.30(10)(a)).
+  - **Launching Craft**: Fully loaded lifeboats and liferafts assumed swung out ready for lowering (Ref: 4.30(10)(b)).
+  - **Wind Pressure**: Assumed at **120 N/m²** (Ref: 4.30(10)(c)).
+- **Intermediate Flooding Conditions**: Maximum righting lever must be at least **0.05 metres** with a positive righting lever range of at least **7°** (Ref: 4.30(10)(d)).
+
+### Damage Assumptions
+- **Extent of Damage**: Longitudinal extent is **3 metres plus 3% of the ship's length (L)** or **11 metres**, whichever is less. For a subdivision factor of **0.33 or less**, the extent must include two consecutive main transverse watertight bulkheads (Ref: 4.30(12)(a)).
+- **Transverse and Vertical Extent**: Transverse extent is **one-fifth of the breadth of the ship**, and vertical extent is from the baseline upwards without limit (Ref: 4.30(12)(b) and (c)).
+
+### Unsymmetrical Flooding
+- **Minimization**: Unsymmetrical flooding should be minimized (Ref: 4.30(13)(a)).
+- **Heeling Angle**: Maximum angle of heel after flooding should not exceed **15°** (Ref: 4.30(13)(d)).
+- **Equalization Time**: Time for equalization must not exceed **15 minutes** (Ref: 4.30(13)(e)).
+
+### Final Conditions After Damage
+- **Residual Metacentric Height**: Must be at least **50 mm** for symmetrical flooding (Ref: 4.30(14)(a)).
+- **Angle of Heel**: Should not exceed **7°** for one-compartment flooding and **12°** for simultaneous flooding of two or more compartments (Ref: 4.30(14)(b)).
+- **Margin Line**: Must not be submerged in the final stage of flooding (Ref: 4.30(14)(c)).
+
+### Operational Procedures
+- **Master's Data**: The master must be provided with data to maintain sufficient intact stability and informed of conditions affecting stability (Ref: 4.30(15)).
+- **Draught Marks**: Permanent draught marks must be provided at the bow and stern, with specific visibility and placement requirements (Ref: 4.30(17)).
+- **Stability Determination**: Prior to departure, the master must determine the ship's trim and stability, ensuring compliance with approved stability criteria (Ref: 4.30(20)).
+- **Exemptions**: Relaxations from damage stability requirements may only be granted in exceptional cases, with the Administration's satisfaction on ship characteristics (Ref: 4.30(22)).
+
+This summary provides a structured overview of the key requirements and specifications outlined in REG Section 4.30 regarding stability in damaged conditions, facilitating easier comprehension and application for maritime engineers.
+
+📚 Citations: 4.30
+
+[4.2] Structured Summary of MALTA Stability Section:
+
+--------------------------------------------------------------------------------
+  ❓ DEMO 5: Additional Technical Questions
+--------------------------------------------------------------------------------
+
+
+[1/3] Processing question...
+Q: What stability documentation is required for a 50m yacht carrying 20 persons under Malta PYC?
+
+A: For a 50m yacht carrying 20 persons under the Malta Passenger Yacht Code (PYC), the following stability documentation requirements apply:
+
+1. **General Compliance**:
+   - The yacht must comply with the requirements of the International Load Line Convention, Passenger Ship classification requirements/rules of a Recognised Organisation (RO), and the Intact Stability Code 2008 (Ref: 5.1.1.1).
+
+2. **Stability Documentation**:
+   - The yacht must demonstrate compliance with the intact stability requirements as specified in the Intact Stability Code (Ref: 5.1.1.3).
+   - Additionally, for damage stability, the yacht must comply with the requirements of SOLAS and/or the applicable sections of the Code (Ref: 5.1.3.1).
+
+3. **Specific Stability Requirements**:
+   - As the yacht is under 80m in length and carries more than 12 but not more than 36 passengers, it falls under the application of the Passenger Yacht Code (Ref: 2.1.1).
+   - The yacht must also ensure that its hull, machinery, and all equipment are constructed and installed to be capable of regular maintenance, ensuring they are satisfactory for the yacht’s intended service (Ref: 2.1.4).
+
+4. **Operational Limitations**:
+   - The yacht's "Statement of Operational Limitations" should include maximum wind speed or 'Derived Heel Angle' and reference the vessel’s 'Sailing Operations Manual' if applicable (Ref: 11.3).
+
+In summary, the required stability documentation for a 50m yacht carrying 20 persons includes compliance with the International Load Line Convention, Passenger Ship classification rules, the Intact Stability Code, and the relevant SOLAS damage stability requirements. Additionally, operational limitations must be documented as per the regulations.
+
+📚 Citations: Section 4.30, Section 5, Section 2
+📄 Chunks used: 5
+
+
+[2/3] Processing question...
+Q: What operational stability information must be available on the bridge?
+
+A: The operational stability information that must be available on the bridge is outlined in Section 4.22 - Damage Control Information. The requirements are as follows:
+
+1. **Plans and Booklets**:
+   - There shall be permanently exhibited, or readily available on the navigation bridge:
+     - Plans showing clearly for each deck and storage space the boundaries of the watertight compartments, the openings therein with the means of closure, and the position of any controls thereof (Ref: 4.22(1)(a)).
+     - Booklets containing the aforementioned information shall be made available to the officers of the ship (Ref: 4.22(1)(b)).
+
+2. **Watertight Doors**:
+   - Watertight doors in passenger ships permitted to remain open during navigation shall be clearly indicated in the ship’s stability information (Ref: 4.22(2)).
+
+3. **General Precautions**:
+   - General precautions shall consist of a listing of equipment, conditions, and operational procedures considered necessary to maintain watertight integrity under normal ship operations (Ref: 4.22(3)).
+
+4. **Specific Precautions**:
+   - Specific precautions shall include a listing of elements (i.e., closures, security of stores, sounding of alarms, etc.) considered vital to the survival of the ship, passengers, and crew (Ref: 4.22(4)).
+
+5. **Damage Stability Information**:
+   - For ships to which damage stability requirements apply, damage stability information shall provide the master with a simple and easily understandable way of assessing the ship’s survivability in all damage cases involving a compartment or group of compartments (Ref: 4.22(5)).
+
+This information is crucial for the officer in charge to effectively manage the ship's stability and respond to any flooding incidents.
+
+📚 Citations: Section 4.4, Section 4.22, Section 4.3, Section 4.23
+📄 Chunks used: 5
+
+
+[3/3] Processing question...
+Q: Which damage control information is required under REG for yachts <36 pax?
+
+A: The answer is not found in the provided regulatory text.
+
+📚 Citations: Section 5, Section 4.30, Section 4.22
+📄 Chunks used: 5
+
+
+================================================================================
+  ✨ Extended Demo Complete
+================================================================================
+
+
+System Capabilities Demonstrated:
+  ✅ 1. Generating compliance checklists (REG & MALTA)
+  ✅ 2. Comparing requirements across flag states (REG vs MALTA)
+  ✅ 3. Highlighting gaps (INTERNAL vs REG/MALTA)
+  ✅ 4. Producing structured summaries
+  ✅ 5. Answering technical questions with citations
+
+================================================================================
+
+📊 System Statistics:
+  - Total chunks: 173
+  - Flags: REG, MALTA
+  - REG: 162 chunks
+  - MALTA: 11 chunks
+
+================================================================================
